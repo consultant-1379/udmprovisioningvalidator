@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "eric-udm-udmprovisioningvalidator.deploy.name" . }}-log-config
+{{- include "eric-udm-udmprovisioningvalidator.helm-labels" . | indent 2 }}
+{{- include "eric-udm-udmprovisioningvalidator.helm-annotations" . | indent 2 }}
+data:
+  logControl.json: |-
+    [
+    ]
